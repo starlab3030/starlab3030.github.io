@@ -10,9 +10,11 @@
 
 ## 1. 레드햇 엔터프라이즈 리눅스
 
-Red Hat Enterprise Linux (RHEL)
+Red Hat Enterprise Linux (RHEL)는 엔터프라이즈 환경을 위한 안정성 / 성능 / 보안을 제공하는 리눅스 운영체제 입니다.
 
+### 1.1 RHEL 기능 소개
 
+* [Pacemaker 설치 및 구성](https://github.com/starlab3030/pacemaker)
 <br>
 <br>
 
@@ -20,6 +22,7 @@ Red Hat Enterprise Linux (RHEL)
 
 Ansible Automation Platform (AAP)
 
+* [AAP 2.5 설치](https://github.com/starlab3030/aap-instalation)
 <br>
 <br>
 
@@ -27,6 +30,7 @@ Ansible Automation Platform (AAP)
 
 OpenShift Virtualization (virt)
 
+* [오픈시프트 가상화 로드쇼](https://github.com/starlab3030/openshift-virt-lab/tree/main/openshift)
 <br>
 <br>
 
@@ -34,7 +38,35 @@ OpenShift Virtualization (virt)
 
 Red Hat OpenStack Services on OpenShift (RHOSO)
 
+### 4.1 RHOSO 설치
 
+* 기본적인 방식으로 오픈시프트 상에서 오픈스택 설치
+  + 오픈스택 서비스 설치 사전 준비, 설치까지 오픈시프트가 제공하는 CLI(oc 명령어) 및 GUI를 통해 설치
+  + 오프스택을 설치하는 기본적인 방법
+* ArgoCD를 통한 GitOps 형태로 오픈스택 설치
+  + 오프스택 설치에 필요한 리소스를 GitHub에 YAML로 구성 후, ArgoCD 앱을 생성하여 설치
+  + 오픈시프트가 제공하는 GitOps를 통해 빠르고 쉽게 설치 가능
+
+#### 4.1.1 기본 설치 
+
+1. [사전 준비](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab/pre-requisite-ops.md)
+2. [오픈스택 서비스 오퍼레이터 설치](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab/install-oso-operators.md)
+3. [오픈스택 서비스 보안 접근 구성](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab/provide-secure-access-to-rhoso.md)
+4. [오픈스택 서비스 네트워크 구성](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab/prepare-openshfit-for-rhoso-network-isolation.md)
+5. [오픈스택 서비스 컨트롤-플레인 생성](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab/create-oso-ctl-plane.md)
+6. [오픈스택 데이터-플레인 구성](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab/configure-data-plane.md)
+7. [오픈스택 접속](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab/access-openstack.md)
+8. [오픈스택 노드 확장](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab/scale-out-compute.md)
+
+#### 4.1.2 ArgoCD를 기반으로 오픈스택 설치
+
+1. [ArgoCD 설치](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab-via-argocd/install-argocd.md)
+2. [사전 준비](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab-via-argocd/pre-requisite-ops-via-argocd.md)
+3. [오픈스택 서비스 오퍼레이터 설치](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab-via-argocd/install-oso-operators-via-argocd.md)
+4. [오프스택 서비스 네트워크 구성](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab-via-argocd/prepare-openshfit-for-rhoso-network-isolation-via-argocd.md)
+5. [오픈스택 서비스 컨트롤-플레인 생성]https://github.com/starlab3030/rhoso-temp/blob/main/(beta-lab-via-argocd/create-oso-ctl-plane-via-argocd.md)
+6. [오픈스택 데이터-플레인 구성](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab-via-argocd/configure-data-plane-via-argocd.md)
+7. [오픈스택 노드 확장](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab-via-argocd/scale-out-compute.md)
 <br>
 <br>
 

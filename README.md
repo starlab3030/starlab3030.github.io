@@ -56,13 +56,13 @@ RHEL AI는 엔터프라이즈 환경에서 쉽고 빠르게 AI를 도입하여 �
 
 ### 5.2 AI를 위한 교육
 
-<!-->
+<!---
 |세션|항목|
 |:---|:---|
 |RHEL AI 101|<ul><li>[NVIDIA 소개 및 특징](https://github.com/starlab3030/rhel-ai/blob/main/nvidia_gpus/nvidia_gpu_features.md)</li><li>[RHEL AI 소개](https://github.com/starlab3030/rhel-ai/blob/main/contents/instroduction_of_rhel_ai.md)</li><li>[RHEL AI 설치 & 관리](https://github.com/starlab3030/rhel-ai/blob/main/contents/manage_life-cycle_of_rhel_ai.md)</li></ul>|
 |RHEL AI 201|<ul><li>[RHEL AI 기본 설정](https://github.com/starlab3030/rhel-ai/blob/main/contents/rhel_ai.md)</li><li>[기술 및 지식](https://github.com/starlab3030/rhel-ai/blob/main/contents/skills_and_knowledges.md)</li><li>[커스텀 LLM 구성](https://github.com/starlab3030/rhel-ai/blob/main/contents/generate_custom_llm.md)</li></ul>|
 |RHEL AI 301|<ul><li>[커스텀 LLM 생성](https://github.com/starlab3030/rhel-ai/blob/main/sample_tests/custom_llm_with_dgx-h100.md)</li><li>[다양한 모델 훈련 변수](https://github.com/starlab3030/rhel-ai/blob/main/sample_tests/train_llm_with_various_vars.md)</li></ul>|
-<-->
+--->
 
 <table align="left">
   <tr>

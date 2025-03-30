@@ -65,9 +65,9 @@ RHEL AI는 엔터프라이즈 환경에서 쉽고 빠르게 AI를 도입하여 �
 --->
 
 <table>
-  <tr style="color:#0000ff">
-    <th>세션</th>
-    <th>항목</th>
+  <tr>
+    <th style="color:#0000ff">세션</th>
+    <th style="color:#0000ff">항목</th>
   </tr>
   <tr>
     <td>RHEL AI 101</td>

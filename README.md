@@ -7,7 +7,8 @@
 4. [오픈스택 서비스](README.md#4-오픈스택-서비스)
 5. [RHEL AI](README.md#5-rhel-ai)
 99. [참조](README.md#99-참조)
-
+<br>
+<br>
 
 ## 1. 레드햇 엔터프라이즈 리눅스
 
@@ -21,7 +22,7 @@ Red Hat Enterprise Linux (RHEL)는 엔터프라이즈 환경을 위한 안정성
 
 ## 2. 앤서블 오토메이션 플랫폼
 
-Ansible Automation Platform (AAP)
+Ansible Automation Platform (AAP)는 미션 크리티컬한 IT 환경에 고객의 요구와 서비스에 맞게 안전하고 유연한 인프라 확장 및 자동화 관리를 제공하는 플랫폼 입니다.
 
 * [AAP 2.5 설치](https://github.com/starlab3030/aap-instalation)
 <br>
@@ -29,7 +30,7 @@ Ansible Automation Platform (AAP)
 
 ## 3. 오픈시프트 가상화
 
-OpenShift Virtualization (virt)
+OpenShift Virtualization (virt)는 오픈시프트를 기반으로 클라우드-네이티브 가상화를 제공하는 플랫폼 입니다.
 
 * [오픈시프트 가상화 로드쇼](https://github.com/starlab3030/openshift-virt-lab/tree/main/openshift)
 <br>
@@ -37,7 +38,7 @@ OpenShift Virtualization (virt)
 
 ## 4. 오픈스택 서비스
 
-Red Hat OpenStack Services on OpenShift (RHOSO)
+Red Hat OpenStack Services on OpenShift (RHOSO)는 오픈시프트 상에 오픈스택 컨트롤-플레인을 설치하고, RHEL 기반의 컴퓨트 노드를 구성할 수 있는 서비스 입니다.
 
 ### 4.1 RHOSO 설치
 
@@ -65,7 +66,7 @@ Red Hat OpenStack Services on OpenShift (RHOSO)
 2. [사전 준비](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab-via-argocd/pre-requisite-ops-via-argocd.md)
 3. [오픈스택 서비스 오퍼레이터 설치](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab-via-argocd/install-oso-operators-via-argocd.md)
 4. [오프스택 서비스 네트워크 구성](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab-via-argocd/prepare-openshfit-for-rhoso-network-isolation-via-argocd.md)
-5. [오픈스택 서비스 컨트롤-플레인 생성](https://github.com/starlab3030/rhoso-temp/blob/main/(beta-lab-via-argocd/create-oso-ctl-plane-via-argocd.md)
+5. [오픈스택 서비스 컨트롤-플레인 생성](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab-via-argocd/create-oso-ctl-plane-via-argocd.md)
 6. [오픈스택 데이터-플레인 구성](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab-via-argocd/configure-data-plane-via-argocd.md)
 7. [오픈스택 노드 확장](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab-via-argocd/scale-out-compute.md)
 <br>

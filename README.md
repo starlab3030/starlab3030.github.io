@@ -5,6 +5,8 @@
 <br>
 <br>
 
-.....
+------
 
-Seungell Technology And Research LAB
+<right>
+Powered By Shadowman
+</right>

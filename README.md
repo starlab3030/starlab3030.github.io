@@ -12,6 +12,4 @@
 
 ------
 
-<right>
 Powered By Shadowman
-</right>

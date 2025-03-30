@@ -66,8 +66,8 @@ RHEL AI는 엔터프라이즈 환경에서 쉽고 빠르게 AI를 도입하여 �
 
 <table>
   <tr>
-    <th style="color:#0000ff">세션</th>
-    <th style="color:#0000ff">항목</th>
+    <th>세션</th>
+    <th>항목</th>
   </tr>
   <tr>
     <td>RHEL AI 101</td>
@@ -81,11 +81,22 @@ RHEL AI는 엔터프라이즈 환경에서 쉽고 빠르게 AI를 도입하여 �
   </tr>
   <tr>
     <td>RHEL AI 201</td>
-    <td></td>
+    <td>
+      <ul>
+        <li><a href=https://github.com/starlab3030/rhel-ai/blob/main/contents/rhel_ai.md>RHEL AI 기본 설정</a></li>
+        <li><a href=https://github.com/starlab3030/rhel-ai/blob/main/contents/skills_and_knowledges.md>기술 및 지식</a></li>
+        <li><a href=https://github.com/starlab3030/rhel-ai/blob/main/contents/generate_custom_llm.md>커스텀 LLM 구성</a></li>
+      </ul>
+    </td>
   </tr>
   <tr>
     <td>RHEL AI 301</td>
-    <td></td>
+    <td>
+      <ul>
+        <li><a href=https://github.com/starlab3030/rhel-ai/blob/main/sample_tests/custom_llm_with_dgx-h100.md>커스텀 LLM 생성</a></li>
+        <li><a href=https://github.com/starlab3030/rhel-ai/blob/main/sample_tests/train_llm_with_various_vars.md>다양한 모델 훈련 변수</a></li>
+      </ul>
+    </td>
   </tr>
 </table>
 

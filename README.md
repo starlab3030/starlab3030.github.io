@@ -74,8 +74,8 @@ RHEL AI는 엔터프라이즈 환경에서 쉽고 빠르게 AI를 도입하여 �
     <th>
       <ul>
         <li><a href=https://github.com/starlab3030/rhel-ai/blob/main/nvidia_gpus/nvidia_gpu_features.md>NVIDIA 소개 및 특징</a></li>
-        <li>[RHEL AI 소개](https://github.com/starlab3030/rhel-ai/blob/main/contents/instroduction_of_rhel_ai.md)</li>
-        <li>[RHEL AI 설치 & 관리](https://github.com/starlab3030/rhel-ai/blob/main/contents/manage_life-cycle_of_rhel_ai.md)</li>
+        <li><a href=https://github.com/starlab3030/rhel-ai/blob/main/contents/instroduction_of_rhel_ai.md>RHEL AI 소개</a></li>
+        <li><a href=https://github.com/starlab3030/rhel-ai/blob/main/contents/manage_life-cycle_of_rhel_ai.md>RHEL AI 설치 & 관리</a></li>
       </ul>
     </th>
   </tr>

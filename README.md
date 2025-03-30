@@ -32,7 +32,7 @@ Ansible Automation Platform (AAP)는 미션 크리티컬한 IT 환경에 고객�
 
 OpenShift Virtualization (virt)는 오픈시프트를 기반으로 클라우드-네이티브 가상화를 제공하는 플랫폼 입니다.
 
-* [오픈시프트 가상화 로드쇼](https://github.com/starlab3030/openshift-virt-lab/tree/main/openshift)
+* [오픈시프트 가상화 로드쇼](https://github.com/starlab3030/openshift-virt-lab)
 <br>
 <br>
 
@@ -51,6 +51,7 @@ Red Hat OpenStack Services on OpenShift (RHOSO)는 오픈시프트 상에 오픈
 
 #### 4.1.1 기본 설치 
 
+[**설치 과정**](https://github.com/starlab3030/rhoso-temp)
 1. [사전 준비](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab/pre-requisite-ops.md)
 2. [오픈스택 서비스 오퍼레이터 설치](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab/install-oso-operators.md)
 3. [오픈스택 서비스 보안 접근 구성](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab/provide-secure-access-to-rhoso.md)
@@ -62,6 +63,7 @@ Red Hat OpenStack Services on OpenShift (RHOSO)는 오픈시프트 상에 오픈
 
 #### 4.1.2 ArgoCD를 기반으로 오픈스택 설치
 
+[**설치 과정**](https://github.com/starlab3030/rhoso-temp)
 1. [ArgoCD 설치](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab-via-argocd/install-argocd.md)
 2. [사전 준비](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab-via-argocd/pre-requisite-ops-via-argocd.md)
 3. [오픈스택 서비스 오퍼레이터 설치](https://github.com/starlab3030/rhoso-temp/blob/main/beta-lab-via-argocd/install-oso-operators-via-argocd.md)

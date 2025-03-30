@@ -64,28 +64,28 @@ RHEL AI는 엔터프라이즈 환경에서 쉽고 빠르게 AI를 도입하여 �
 |RHEL AI 301|<ul><li>[커스텀 LLM 생성](https://github.com/starlab3030/rhel-ai/blob/main/sample_tests/custom_llm_with_dgx-h100.md)</li><li>[다양한 모델 훈련 변수](https://github.com/starlab3030/rhel-ai/blob/main/sample_tests/train_llm_with_various_vars.md)</li></ul>|
 --->
 
-<table align="left">
+<table>
   <tr>
     <th>세션</th>
     <th>항목</th>
   </tr>
   <tr>
-    <th>RHEL AI 101</th>
-    <th>
+    <td>RHEL AI 101</td>
+    <td>
       <ul>
         <li><a href=https://github.com/starlab3030/rhel-ai/blob/main/nvidia_gpus/nvidia_gpu_features.md>NVIDIA 소개 및 특징</a></li>
         <li><a href=https://github.com/starlab3030/rhel-ai/blob/main/contents/instroduction_of_rhel_ai.md>RHEL AI 소개</a></li>
         <li><a href=https://github.com/starlab3030/rhel-ai/blob/main/contents/manage_life-cycle_of_rhel_ai.md>RHEL AI 설치 & 관리</a></li>
       </ul>
-    </th>
+    </td>
   </tr>
   <tr>
-    <th>RHEL AI 201</th>
-    <th></th>
+    <td>RHEL AI 201</td>
+    <td></td>
   </tr>
   <tr>
-    <th>RHEL AI 301</th>
-    <th></th>
+    <td>RHEL AI 301</td>
+    <td></td>
   </tr>
 </table>
 

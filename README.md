@@ -44,6 +44,8 @@ RHEL AI는 엔터프라이즈 환경에서 쉽고 빠르게 AI를 도입하여 �
 
 고객은 출시된 모델을 기반으로 AI 앱을 연동하여 서비스를 제공할 수 있습니다.
 
+### 5.1 RHEL AI 기술
+
 * [RHEL AI](https://github.com/starlab3030/rhel-ai)
 
 * `STARLAB3030`을 위한 AI
@@ -52,7 +54,7 @@ RHEL AI는 엔터프라이즈 환경에서 쉽고 빠르게 AI를 도입하여 �
   + [택소노미 트리](https://github.com/starlab3030/taxonomy_for_instructlab)
 <br>
 
-AI를 위한 교육
+### 5.2 AI를 위한 교육
 
 |세션|항목|
 |:---|:---|
@@ -64,29 +66,29 @@ AI를 위한 교육
 
 ## 99. 참조
 
-## 99.1 RHEL을 위한 참조 링크
+### 99.1 RHEL을 위한 참조 링크
 
 *차후 업데이트*
 <br>
 
-## 99.2 AAP를 위한 참조 링크
+### 99.2 AAP를 위한 참조 링크
 
 *차후 업데이트*
 <br>
 
-## 99.3 오픈시프트 가상화를 위한 참조 링크
+### 99.3 오픈시프트 가상화를 위한 참조 링크
 
 *차후 업데이트*
 <br>
 
-## 99.4 RHOSO를 위한 참조 링크
+### 99.4 RHOSO를 위한 참조 링크
 
 *차후 업데이트*
 <br>
 
-## 99.5 RHEL AI를 위한 참조 링크
+### 99.5 RHEL AI를 위한 참조 링크
 
-### 99.5.1 커스텀 LLM을 위한 링크
+#### 99.5.1 커스텀 LLM을 위한 링크
 
 **허깅 페이스**
 * [STARLAB3030](https://huggingface.co/starlab3030)
@@ -95,7 +97,7 @@ AI를 위한 교육
 * [지식 관련 마크다운 문서](https://github.com/starlab3030/knowledges_for_instructlab)
 * [택소노미 트리](https://github.com/starlab3030/taxonomy_for_instructlab)
 
-### 99.5.2 외부 링크
+#### 99.5.2 외부 링크
 
 **InstructLAB 커뮤니티**
 * [InstructLAB의 *git* 리포지토리](https://github.com/instructlab)

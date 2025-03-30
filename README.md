@@ -61,7 +61,7 @@ RHEL AI는 엔터프라이즈 환경에서 쉽고 빠르게 AI를 도입하여 �
 |RHEL AI 101|* [NVIDIA 소개 및 특징](https://github.com/starlab3030/rhel-ai/blob/main/nvidia_gpus/nvidia_gpu_features.md)<br>* [RHEL AI 소개](https://github.com/starlab3030/rhel-ai/blob/main/contents/instroduction_of_rhel_ai.md)<br>* [RHEL AI 설치 & 관리](https://github.com/starlab3030/rhel-ai/blob/main/contents/manage_life-cycle_of_rhel_ai.md)|
 |RHEL AI 201|* [RHEL AI 기본 설정](https://github.com/starlab3030/rhel-ai/blob/main/contents/rhel_ai.md)<br>* [기술 및 지식](https://github.com/starlab3030/rhel-ai/blob/main/contents/skills_and_knowledges.md)<br>* [커스텀 LLM 구성](https://github.com/starlab3030/rhel-ai/blob/main/contents/generate_custom_llm.md)|
 |RHEL AI 301|* [커스텀 LLM 생성](https://github.com/starlab3030/rhel-ai/blob/main/sample_tests/custom_llm_with_dgx-h100.md)<br>* [다양한 모델 훈련 변수](https://github.com/starlab3030/rhel-ai/blob/main/sample_tests/train_llm_with_various_vars.md)|
-
+<br>
 <!---
 <table>
   <tr>
@@ -100,6 +100,12 @@ RHEL AI는 엔터프라이즈 환경에서 쉽고 빠르게 AI를 도입하여 �
 </table>
 --->
 
+### 5.3 커뮤니티 InstructLAB
+
+CY24 RHSC 키노트 세션 데모
+1. [LLM과 InstructLAB](https://github.com/starlab3030/rhel-ai/blob/main/rhsc-demo/introdution-of-lab.md)
+2. [InstructLAB 기반 모델 관리](https://github.com/starlab3030/rhel-ai/blob/main/rhsc-demo/start-with-instructlab.md)
+3. [AI를 보험 앱에 통합하기](https://github.com/starlab3030/rhel-ai/blob/main/rhsc-demo/integrate-ai-into-app.md)
 <br>
 <br>
 
@@ -164,4 +170,4 @@ RHEL AI는 엔터프라이즈 환경에서 쉽고 빠르게 AI를 도입하여 �
 
 ------
 
-Powered By Shadowman
+***Powered By Shadowman***

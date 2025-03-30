@@ -206,4 +206,4 @@ CY24 RHSC 키노트 세션 데모
 
 ------
 
-***Powered By Shadowman***   [Git](https://github.com/starlab3030/starlab3030.github.io)   [YouTube](https://www.youtube.com/@starlab3030)   [HuggingFace](https://huggingface.co/starlab3030)   [Blog](https://blog.naver.com/dark_selee)
+***Powered By Shadowman*** &nbsp;&nbsp;[Git](https://github.com/starlab3030/starlab3030.github.io)&nbsp;&nbsp;[YouTube](https://www.youtube.com/@starlab3030)&nbsp;&nbsp;[HuggingFace](https://huggingface.co/starlab3030)&nbsp;&nbsp;[Blog](https://blog.naver.com/dark_selee)

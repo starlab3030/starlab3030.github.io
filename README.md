@@ -84,8 +84,8 @@ RHEL AI는 엔터프라이즈 환경에서 쉽고 빠르게 AI를 도입하여 �
 
 * [RHEL AI](https://github.com/starlab3030/rhel-ai)
 
-* `STARLAB3030`을 위한 AI
-  + [허깅페이스](https://github.com/starlab3030)
+* `STARLAB3030`을 위한 AI 저장소
+  + [허깅페이스](https://huggingface.co/starlab3030)
   + [마크다운 문서](https://github.com/starlab3030/knowledges_for_instructlab)
   + [택소노미 트리](https://github.com/starlab3030/taxonomy_for_instructlab)
 <br>

@@ -109,6 +109,15 @@ CY24 RHSC 키노트 세션 데모
 <br>
 <br>
 
+## 6. 오픈시프트 AI
+
+### 6.1 모델 훈련
+
+1. [오픈시프트 상에서 KubeFlow를 통한 LLM Fine-Tuning](https://github.com/starlab3030/openshift-ai/blob/main/contents/fine-tune_llms_with_kubeflow_trainer_on_openshift.md)<br>
+2. [GPUDirect RDMA를 통한 모델 훈련 가속화](https://github.com/starlab3030/openshift-ai/blob/main/contents/accelerate_model_training_with_nvidia_gpudirect_rdma.md)<br>   
+<br>
+<br>
+
 ## 99. 참조
 
 <!---

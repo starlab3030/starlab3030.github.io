@@ -6,6 +6,7 @@
 3. [오픈시프트 가상화](README.md#3-오픈시프트-가상화)
 4. [오픈스택 서비스](README.md#4-오픈스택-서비스)
 5. [RHEL AI](README.md#5-rhel-ai)
+6. [오픈시프트 AI](README.md#6-오픈시프트-ai)
 99. [참조](README.md#99-참조)
 <br>
 <br>

@@ -119,6 +119,14 @@ CY24 RHSC 키노트 세션 데모
 <br>
 <br>
 
+## 7. vLLM
+
+1. [vLLM 소개](https://github.com/starlab3030/rhel-ai/blob/main/vllm/intro_of_vllm.md)<br>
+2. [llm-d: 쿠버네티스-네이티브 분산 추론](https://github.com/starlab3030/rhel-ai/blob/main/vllm/llm-d_for_k8s-native_distributed_inferencing.md)<br>
+
+<br>
+<br>
+
 ## 99. 참조
 
 <!---

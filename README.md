@@ -33,7 +33,9 @@ Ansible Automation Platform (AAP)는 미션 크리티컬한 IT 환경에 고객�
 
 OpenShift Virtualization (virt)는 오픈시프트를 기반으로 클라우드-네이티브 가상화를 제공하는 플랫폼 입니다.
 
-* [오픈시프트 가상화 로드쇼](https://github.com/starlab3030/openshift-virt-lab)
+**오픈시프트 가상화 로드쇼**
+* [기초](https://github.com/starlab3030/openshift-virt-lab)
+* [중급](https://github.com/starlab3030/openshift-virt-lab/tree/main/roadshow_v2)
 <br>
 <br>
 

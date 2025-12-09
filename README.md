@@ -7,6 +7,8 @@
 4. [오픈스택 서비스](README.md#4-오픈스택-서비스)
 5. [RHEL AI](README.md#5-rhel-ai)
 6. [오픈시프트 AI](README.md#6-오픈시프트-ai)
+7. [vllm](README.md#7-vllm)
+88. [외부 사용자를 위한 공유 리포지토리](README.md#88-외부-사용자를-위한-공유-리포지토리)
 99. [참조](README.md#99-참조)
 <br>
 <br>
@@ -18,6 +20,7 @@ Red Hat Enterprise Linux (RHEL)는 엔터프라이즈 환경을 위한 안정성
 ### 1.1 RHEL 기능 소개
 
 * [Pacemaker 설치 및 구성](https://github.com/starlab3030/pacemaker)
+* [리눅스 상에서 컨테이너 빌드, 실행 및 관리](https://github.com/starlab3030/containers_on_rhel)
 <br>
 <br>
 
@@ -25,7 +28,9 @@ Red Hat Enterprise Linux (RHEL)는 엔터프라이즈 환경을 위한 안정성
 
 Ansible Automation Platform (AAP)는 미션 크리티컬한 IT 환경에 고객의 요구와 서비스에 맞게 안전하고 유연한 인프라 확장 및 자동화 관리를 제공하는 플랫폼 입니다.
 
-* [AAP 2.5 설치](https://github.com/starlab3030/aap-instalation)
+* [AAP 2.6 설치](https://github.com/starlab3030/aap-instalation)
+  + 컨테이너 기반 기본 설치
+  + 컨테이너 기반 고가용성 설치
 <br>
 <br>
 
@@ -34,8 +39,9 @@ Ansible Automation Platform (AAP)는 미션 크리티컬한 IT 환경에 고객�
 OpenShift Virtualization (virt)는 오픈시프트를 기반으로 클라우드-네이티브 가상화를 제공하는 플랫폼 입니다.
 
 **오픈시프트 가상화 로드쇼**
-* [기초](https://github.com/starlab3030/openshift-virt-lab)
-* [중급](https://github.com/starlab3030/openshift-virt-lab/tree/main/roadshow_v2)
+* [로드쇼](https://github.com/starlab3030/openshift-virt-lab)
+  + [기본](https://github.com/starlab3030/openshift-virt-lab/tree/main/roadshow)
+  + [Day2 작업](https://github.com/starlab3030/openshift-virt-lab/tree/main/roadshow_for_day2)
 <br>
 <br>
 
@@ -43,11 +49,12 @@ OpenShift Virtualization (virt)는 오픈시프트를 기반으로 클라우드-
 
 Red Hat OpenStack Services on OpenShift (RHOSO)는 오픈시프트 상에 오픈스택 컨트롤-플레인을 설치하고, RHEL 기반의 컴퓨트 노드를 구성할 수 있는 서비스 입니다.
 
-### 4.1 RHOSO 설치
+### 4.1 RHOSO 설치 (18 TP 기준)
 
 * 기본적인 방식으로 오픈시프트 상에서 오픈스택 설치
   + 오픈스택 서비스 설치 사전 준비, 설치까지 오픈시프트가 제공하는 CLI(oc 명령어) 및 GUI를 통해 설치
   + 오프스택을 설치하는 기본적인 방법
+
 * ArgoCD를 통한 GitOps 형태로 오픈스택 설치
   + 오프스택 설치에 필요한 리소스를 GitHub에 YAML로 구성 후, ArgoCD 앱을 생성하여 설치
   + 오픈시프트가 제공하는 GitOps를 통해 빠르고 쉽게 설치 가능
@@ -112,20 +119,53 @@ CY24 RHSC 키노트 세션 데모
 <br>
 <br>
 
-## 6. 오픈시프트 AI
+## 6. 블로그 -- 레드햇 AI 
 
-### 6.1 모델 훈련
+**모델 훈련**
+* [오픈시프트 상에서 KubeFlow를 통한 LLM Fine-Tuning](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/model-training/fine-tune_llms_with_kubeflow_trainer_on_openshift.md)
+* [GPUDirect RDMA를 통한 모델 훈련 가속화](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/model-training/accelerate_model_training_with_nvidia_gpudirect_rdma.md)
+<br>
+<br>
 
-1. [오픈시프트 상에서 KubeFlow를 통한 LLM Fine-Tuning](https://github.com/starlab3030/openshift-ai/blob/main/contents/fine-tune_llms_with_kubeflow_trainer_on_openshift.md)<br>
-2. [GPUDirect RDMA를 통한 모델 훈련 가속화](https://github.com/starlab3030/openshift-ai/blob/main/contents/accelerate_model_training_with_nvidia_gpudirect_rdma.md)<br>   
+**GPU 활용**
+* [오픈시프트 AI 상에 MIG를 통한 GPU 효율 최대화](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/gpu-handling/mig_maximizes_gpu_efficiency_on_openshift_ai.md)
+* [오픈시프트 AI 상에 동적 GPU 슬라이싱](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/gpu-handling/dynamic_gpu_slicing_in_openshift.md)
+<br>
+<br>
+
+**AI 추론 서비스**
+* [llm-d: 쿠버네티스-네이티브 분산 추론](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/llm-d/llm-d_for_k8s-native_distributed_inferencing.md)
+* [분산 AI 추론 서비스를 위한 llm-d](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/llm-d/llm-d_for_distributed_ai_inference.md)
+* [효율적인 AI 추론을 위해 llm-d를 사용한 KV 캐시 인식 라우팅](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/llm-d/master_kv_cache_aware_routing_with_llm-d_for_efficient_ai_inference.md)
+<br>
+<br>
+
+**AI 에이전트**
+* [RHOAI를 통해 AI 에이전트 구축](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/build_ai_agent_via_rhoai.md)
+<br>
+<br>
+
+**Model as a Service**
+* [Model-as-a-Service를 통한 AI 가치 가속화](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/maas/accelerating_ai_value_with_models_as_a_service.md)
+* [OpenShift AI에서 Models-as-a-Service 소개](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/maas/intro_model_as_a_service_in_openshift_ai.md)
+<br>
+<br>
+
+**Llama 스택**<br>
+* [Llama 스택 랩 소개](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/llama_stack/intro_of_llama_stack_on_openshift.md)
 <br>
 <br>
 
 ## 7. vLLM
 
-1. [vLLM 소개](https://github.com/starlab3030/rhel-ai/blob/main/vllm/intro_of_vllm.md)<br>
-2. [llm-d: 쿠버네티스-네이티브 분산 추론](https://github.com/starlab3030/rhel-ai/blob/main/vllm/llm-d_for_k8s-native_distributed_inferencing.md)<br>
+* [vLLM 소개](https://github.com/starlab3030/rhel-ai/blob/main/vllm/intro_of_vllm.md)<br>
+<br>
+<br>
 
+## 88. 외부 사용자를 위한 공유 리포지토리
+
+* [퍼블릭](https://github.com/starlab3030/redhat-public) 
+  + 앤서블
 <br>
 <br>
 

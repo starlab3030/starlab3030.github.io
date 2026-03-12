@@ -142,6 +142,7 @@ CY24 RHSC 키노트 세션 데모
 
 **AI 에이전트**
 * [RHOAI를 통해 AI 에이전트 구축](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/build_ai_agent_via_rhoai.md)
+* [MCP 게이트웨이를 위한 고급 인증 및 권한 부여](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/authentication_and_authorization_for_mcp_gw.md)
 <br>
 <br>
 

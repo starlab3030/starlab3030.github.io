@@ -6,7 +6,7 @@
 3. [오픈시프트 가상화](README.md#3-오픈시프트-가상화)
 4. [오픈스택 서비스](README.md#4-오픈스택-서비스)
 5. [RHEL AI](README.md#5-rhel-ai)
-6. [오픈시프트 AI](README.md#6-오픈시프트-ai)
+6. [블로그 -- 레드햇 AI](README.md#6-블로그----레드햇-ai)
 7. [vllm](README.md#7-vllm)
 88. [외부 사용자를 위한 공유 리포지토리](README.md#88-외부-사용자를-위한-공유-리포지토리)
 99. [참조](README.md#99-참조)
@@ -137,6 +137,8 @@ CY24 RHSC 키노트 세션 데모
 * [llm-d: 쿠버네티스-네이티브 분산 추론](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/llm-d/llm-d_for_k8s-native_distributed_inferencing.md)
 * [분산 AI 추론 서비스를 위한 llm-d](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/llm-d/llm-d_for_distributed_ai_inference.md)
 * [효율적인 AI 추론을 위해 llm-d를 사용한 KV 캐시 인식 라우팅](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/llm-d/master_kv_cache_aware_routing_with_llm-d_for_efficient_ai_inference.md)
+* [vLLM 성능 문제 해결을 위한 5단계](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/llm-d/five_steps_to_address_vllm_performance.md)
+* [vLLM 기반 추론 서비스 성능 진단 가이드 예제](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/llm-d/guide_to_llm_inference_performance_diagnosis.md)
 <br>
 <br>
 

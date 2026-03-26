@@ -6,7 +6,7 @@
 3. [오픈시프트 가상화](README.md#3-오픈시프트-가상화)
 4. [오픈스택 서비스](README.md#4-오픈스택-서비스)
 5. [RHEL AI](README.md#5-rhel-ai)
-6. [블로그 -- 레드햇 AI](README.md#6-블로그----레드햇-ai)
+6. [레드햇 AI 블로그](README.md#6-레드햇-ai-블로그)
 7. [vllm](README.md#7-vllm)
 88. [외부 사용자를 위한 공유 리포지토리](README.md#88-외부-사용자를-위한-공유-리포지토리)
 99. [참조](README.md#99-참조)
@@ -119,7 +119,7 @@ CY24 RHSC 키노트 세션 데모
 <br>
 <br>
 
-## 6. 블로그 -- 레드햇 AI 
+## 6. 레드햇 AI 블로그
 
 **모델 훈련**
 * [오픈시프트 상에서 KubeFlow를 통한 LLM Fine-Tuning](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/model-training/fine-tune_llms_with_kubeflow_trainer_on_openshift.md)

@@ -130,6 +130,7 @@ CY24 RHSC 키노트 세션 데모
 **GPU 활용**
 * [오픈시프트 AI 상에 MIG를 통한 GPU 효율 최대화](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/gpu-handling/mig_maximizes_gpu_efficiency_on_openshift_ai.md)
 * [오픈시프트 AI 상에 동적 GPU 슬라이싱](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/gpu-handling/dynamic_gpu_slicing_in_openshift.md)
+* [AI 워크로드를 위한 스마트한 GPU 스케줄링](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/gpu-handling/smarter_gpu_scheduling_for_ai_workload.md)
 <br>
 <br>
 
@@ -143,8 +144,10 @@ CY24 RHSC 키노트 세션 데모
 <br>
 
 **AI 에이전트**
+* [MCP를 사용하여 간단한 에이전트형 AI 서버를 구축하는 방법](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/howto_build_simple_agentic_ai_with_mcp.md)
 * [RHOAI를 통해 AI 에이전트 구축](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/build_ai_agent_via_rhoai.md)
 * [MCP 게이트웨이를 위한 고급 인증 및 권한 부여](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/authentication_and_authorization_for_mcp_gw.md)
+* [AAP를 위한 MCP 서버 소개](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/intro_mcp_server_for_aap.md)
 <br>
 <br>
 

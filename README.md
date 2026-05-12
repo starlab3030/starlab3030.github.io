@@ -148,6 +148,7 @@ CY24 RHSC 키노트 세션 데모
 * [MCP를 사용하여 간단한 에이전트형 AI 서버를 구축하는 방법](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/howto_build_simple_agentic_ai_with_mcp.md)
 * [RHOAI를 통해 AI 에이전트 구축](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/build_ai_agent_via_rhoai.md)
 * [MCP 게이트웨이를 위한 고급 인증 및 권한 부여](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/authentication_and_authorization_for_mcp_gw.md)
+* [오픈시프트를 위한 MCP 게이트웨이](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/mcp_gateway_for_openshift.md)
 * [AAP를 위한 MCP 서버 소개](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/intro_mcp_server_for_aap.md)
 <br>
 <br>

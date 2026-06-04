@@ -141,6 +141,7 @@ CY24 RHSC 키노트 세션 데모
 * [효율적인 AI 추론을 위해 llm-d를 사용한 KV 캐시 인식 라우팅](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/llm-d/master_kv_cache_aware_routing_with_llm-d_for_efficient_ai_inference.md)
 * [vLLM 성능 문제 해결을 위한 5단계](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/llm-d/five_steps_to_address_vllm_performance.md)
 * [vLLM 기반 추론 서비스 성능 진단 가이드 예제](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/llm-d/guide_to_llm_inference_performance_diagnosis.md)
+* [CPU 기반 AI 추론 벤치마킹](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/vllm/benchmark_ai_inference_on_cpus.md)<br>
 <br>
 <br>
 
@@ -150,6 +151,7 @@ CY24 RHSC 키노트 세션 데모
 * [MCP 게이트웨이를 위한 고급 인증 및 권한 부여](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/authentication_and_authorization_for_mcp_gw.md)
 * [오픈시프트를 위한 MCP 게이트웨이](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/mcp_gateway_for_openshift.md)
 * [AAP를 위한 MCP 서버 소개](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/intro_mcp_server_for_aap.md)
+* [AI 에이전트를 위한 메모리 아키텍처 설계](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/architect_memory_for_ai_agents.md)
 <br>
 <br>
 

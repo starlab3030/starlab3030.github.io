@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>RHEL 10.2 PQC 추가 실습 | Hybrid ML-KEM &amp; ML-DSA</title>
+<style>
+:root{
+--bg:#0b0c0f;--sidebar:#0f1115;--panel:#14161b;--panel2:#1b1f26;--text:#f5f7fa;--muted:#b7bdc8;
+--red:#ee0000;--red2:#ff6b62;--line:#303743;--code:#0d1117;--codeHead:#1d2430;--codeText:#edf3f8;
+--tableAlt:#11151a;--th:#20252d;--button:#20252d;--buttonHover:#343c49;
+--green:#31c48d;--yellow:#f6c344;--blue:#60a5fa;--purple:#c4b5fd;
+}
+html[data-theme="light"]{
+--bg:#ffffff;--sidebar:#f7f7f8;--panel:#ffffff;--panel2:#f1f3f5;--text:#171717;--muted:#59636e;
+--red:#cc0000;--red2:#a30000;--line:#d7dce2;--code:#f6f8fa;--codeHead:#eef1f4;--codeText:#17202a;
+--tableAlt:#fafbfc;--th:#f0f2f4;--button:#ffffff;--buttonHover:#eceff2;
+--green:#087f5b;--yellow:#9a6700;--blue:#0969da;--purple:#6f42c1;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);transition:background .18s ease,color .18s ease;font-family:"Noto Sans KR","Noto Sans CJK KR",system-ui,sans-serif;line-height:1.72}a{color:#84b8ff}.layout{display:grid;grid-template-columns:300px minmax(0,1fr);min-height:100vh}aside{position:sticky;top:0;height:100vh;overflow:auto;border-right:1px solid var(--line);background:var(--sidebar);padding:24px 18px}aside .brand{font-weight:900;font-size:18px;margin-bottom:6px}aside .subbrand{font-size:12px;color:var(--muted);margin-bottom:18px}aside a{display:block;text-decoration:none;color:var(--muted);padding:8px 10px;border-radius:8px;font-size:14px}aside a:hover{background:var(--panel2);color:var(--text)}main{max-width:1120px;padding:46px 58px 100px}.eyebrow{color:var(--red2);font-weight:900;letter-spacing:.09em;font-size:13px}h1{font-size:42px;line-height:1.16;margin:8px 0 14px}h2{font-size:29px;line-height:1.3;margin:8px 0 10px}h3{font-size:20px;margin-top:32px;margin-bottom:10px}p{margin:8px 0 14px}.hero-sub{font-size:18px;color:var(--muted)}section{padding-top:38px;margin-top:30px;border-top:1px solid var(--line)}.section-kicker{display:inline-block;background:var(--red);padding:3px 10px;border-radius:999px;font-weight:900;font-size:12px;letter-spacing:.04em}.lead{font-size:16px;color:var(--text);max-width:900px}.flow{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:28px 0}.flow .box{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--red);padding:15px 12px;border-radius:10px;min-height:118px}.flow b{display:block;font-size:14px;margin-bottom:7px}.flow span{font-size:12px;color:var(--muted)}.tag-model{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:var(--panel);padding:18px;border:1px solid var(--line);border-radius:12px;margin:18px 0}.repo{font-family:ui-monospace,monospace;color:var(--text)}.tag{background:#282d36;border:1px solid #454d5c;padding:7px 11px;border-radius:8px;font-family:ui-monospace,monospace}.arrow{color:var(--muted)}.callout{padding:14px 17px;border-radius:10px;margin:16px 0;background:var(--panel);border-left:4px solid var(--blue)}.callout p{margin:5px 0 0;color:var(--text)}.callout.warn{border-left-color:var(--yellow)}.callout.danger{border-left-color:var(--red)}.callout.ok{border-left-color:var(--green)}.callout strong{color:var(--text)}.code-card{margin:15px 0 20px;border:1px solid #313844;border-radius:12px;overflow:hidden;background:var(--code);box-shadow:0 8px 24px rgba(0,0,0,.16)}.code-head{display:flex;justify-content:space-between;align-items:center;background:var(--codeHead);color:var(--text);padding:10px 14px;font-size:12.5px;font-weight:900;border-bottom:1px solid #3a4352;position:sticky;left:0}button.copy{background:var(--button);color:var(--text);border:1px solid var(--line);border-radius:7px;padding:5px 10px;cursor:pointer}button.copy:hover{background:var(--buttonHover)}pre{margin:0;overflow:auto;padding:22px 24px;tab-size:4;white-space:pre;line-height:1.78;background:var(--code);scrollbar-color:#4b5563 #111827}code{font-family:"Cascadia Code","SFMono-Regular","Liberation Mono",Consolas,monospace;font-size:14.5px;font-variant-ligatures:none;color:var(--codeText);letter-spacing:.005em}code .com{color:#7fb07f}code .kw{color:#ff7b72;font-weight:700}code .cmd{color:#79c0ff;font-weight:700}code .str{color:#a5d6ff}code .var{color:#d2a8ff}.table-scroll{overflow:auto;margin:13px 0 22px}table{width:100%;border-collapse:collapse;background:var(--panel);font-size:14px}th,td{border:1px solid var(--line);padding:11px 12px;vertical-align:top}th{background:var(--th);text-align:left;color:var(--text)}td:nth-child(2){background:var(--tableAlt)}.verify td:first-child{font-weight:800;white-space:nowrap}.mini{font-size:13px;color:var(--muted)}.checklist label{display:block;padding:7px 4px}.checklist input{margin-right:8px}.progress{height:8px;background:#282e37;border-radius:99px;overflow:hidden;margin:10px 0 6px}.progress>span{display:block;height:100%;width:0;background:var(--green);transition:.2s}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.toolbar button{background:var(--button);color:var(--text);border:1px solid var(--line);padding:7px 11px;border-radius:8px;cursor:pointer}.ref-list li{margin:8px 0;word-break:break-all}
+.theme-switch{display:flex;gap:6px;margin:0 0 18px;padding:5px;background:var(--panel2);border:1px solid var(--line);border-radius:10px}
+.theme-switch button{flex:1;border:1px solid transparent;border-radius:7px;padding:7px 8px;background:transparent;color:var(--muted);font-weight:800;cursor:pointer}
+.theme-switch button:hover{color:var(--text)}
+.theme-switch button.active{background:var(--bg);color:var(--text);border-color:var(--line);box-shadow:0 1px 4px rgba(0,0,0,.10)}
+html[data-theme="light"] .code-card{box-shadow:0 5px 18px rgba(20,30,40,.08)}
+html[data-theme="light"] .tag{background:#f4f5f6;border-color:#d1d7de}
+html[data-theme="light"] code .com{color:#1a7f37}
+html[data-theme="light"] code .kw{color:#cf222e}
+html[data-theme="light"] code .cmd{color:#0969da}
+html[data-theme="light"] code .str{color:#0550ae}
+html[data-theme="light"] code .var{color:#8250df}
+@media(max-width:980px){.layout{display:block}aside{position:relative;height:auto;border-right:0;border-bottom:1px solid var(--line)}main{padding:30px 20px}h1{font-size:32px}.flow{grid-template-columns:repeat(2,1fr)}}@media print{aside,.copy,.toolbar{display:none!important}body{background:white;color:#111}main{max-width:none;padding:0}section{break-before:page}.callout,table,.code-card{break-inside:avoid}pre{background:#f6f6f6;color:#111}}
+
+/* --- Interactive command help --- */
+.code-actions{display:flex;align-items:center;gap:7px;margin-left:auto}
+button.explain-toggle,button.quick-tip{
+  background:var(--button);color:var(--text);border:1px solid var(--line);
+  border-radius:7px;padding:5px 9px;cursor:pointer;font-size:12px;font-weight:800
+}
+button.explain-toggle:hover,button.quick-tip:hover{background:var(--buttonHover)}
+button.explain-toggle[aria-expanded="true"]{border-color:var(--blue);color:var(--blue)}
+.command-explain{
+  display:none;border-top:1px solid var(--line);background:var(--panel);
+  padding:14px 17px 15px
+}
+.command-explain.open{display:block}
+.command-explain .explain-title{font-size:12px;font-weight:900;color:var(--muted);margin-bottom:9px}
+.command-explain dl{margin:0;display:grid;grid-template-columns:minmax(170px,32%) 1fr;gap:7px 14px}
+.command-explain dt{margin:0;font-weight:800;min-width:0}
+.command-explain dd{margin:0;color:var(--muted);font-size:13px}
+.command-explain dt code{font-size:12.5px;overflow-wrap:anywhere}
+.quick-tip-wrap{position:relative;display:inline-flex}
+button.quick-tip{padding:5px 8px}
+.quick-tip-pop{
+  display:none;position:absolute;z-index:50;right:0;top:calc(100% + 8px);
+  width:min(440px,75vw);padding:11px 13px;border-radius:9px;
+  border:1px solid var(--line);background:var(--panel2);color:var(--text);
+  box-shadow:0 12px 30px rgba(0,0,0,.25);font-size:12.5px;font-weight:500;
+  line-height:1.55;text-align:left
+}
+.quick-tip-wrap:hover .quick-tip-pop,
+.quick-tip-wrap:focus-within .quick-tip-pop,
+.quick-tip-wrap.open .quick-tip-pop{display:block}
+.quick-tip-pop b{display:block;margin:0 0 5px;font-size:12px;color:var(--blue)}
+.quick-tip-pop .tip-item+.tip-item{margin-top:9px;padding-top:9px;border-top:1px solid var(--line)}
+.quick-tip-pop code{font-size:12px}
+@media(max-width:700px){
+  .code-head{align-items:flex-start;gap:8px}
+  .code-actions{flex-wrap:wrap;justify-content:flex-end}
+  .command-explain dl{grid-template-columns:1fr;gap:3px}
+  .command-explain dd{margin:0 0 8px}
+  .quick-tip-pop{position:fixed;left:16px;right:16px;top:auto;bottom:16px;width:auto;max-height:55vh;overflow:auto}
+}
+
+/* --- 60-minute workshop compact/optional sections --- */
+.core-path{display:flex;gap:7px;align-items:stretch;flex-wrap:wrap;margin:16px 0 22px}
+.core-path span{display:flex;align-items:center;gap:5px;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:8px 10px;font-size:12.5px}
+.core-path b{color:var(--red2)}
+details.optional-details{margin:14px 0 20px;border:1px solid var(--line);border-radius:10px;background:var(--panel);overflow:hidden}
+details.optional-details>summary{cursor:pointer;list-style:none;padding:12px 15px;font-weight:900;color:var(--text);background:var(--panel2)}
+details.optional-details>summary::-webkit-details-marker{display:none}
+details.optional-details>summary::before{content:"▸";display:inline-block;margin-right:8px;color:var(--blue)}
+details.optional-details[open]>summary::before{content:"▾"}
+details.optional-details>.details-body{padding:4px 15px 12px}
+details.optional-details .code-card{margin-left:0;margin-right:0}
+.compact-verify td:first-child{width:38%;white-space:normal}
+@media(max-width:700px){.core-path{display:grid;grid-template-columns:1fr 1fr}}
+
+/* --- Optional CVE verification section --- */
+.cve-options{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0 22px}
+.cve-option{border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:16px}
+.cve-option h4{margin:0 0 8px;font-size:17px}
+.cve-option p{margin:0;color:var(--muted)}
+.console-shot{margin:16px 0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel)}
+.console-shot img{display:block;width:100%;height:auto}
+.console-shot figcaption{padding:10px 13px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+.fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.fact-card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px}
+.fact-card b{display:block;margin-bottom:6px}
+@media(max-width:760px){.cve-options,.fact-grid{grid-template-columns:1fr}}
+
+.pqc-map{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0 22px}
+.pqc-role{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--card);min-height:180px;position:relative;overflow:hidden}
+.pqc-role:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--red)}
+.pqc-role.kem:before{background:#0066cc}.pqc-role.dsa:before{background:#6753ba}.pqc-role.aes:before{background:#3e8635}
+.pqc-role .tag{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pqc-role h3{margin:8px 0 8px;font-size:20px}.pqc-role p{margin:0 0 8px;line-height:1.6}.pqc-role .memory{font-weight:800;font-size:15px}
+.bridge{display:grid;grid-template-columns:1fr 72px 1fr;align-items:center;gap:12px;margin:20px 0}
+.bridge .panel{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--card)}
+.bridge .arrow{text-align:center;font-size:30px;color:var(--red);font-weight:800}
+.output-explain{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+.output-explain>div{border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--card)}
+.badge-required,.badge-optional{display:inline-flex;border-radius:999px;padding:4px 9px;font-size:11px;font-weight:800;margin-left:8px;vertical-align:middle}
+.badge-required{background:#fee2e2;color:#991b1b}.badge-optional{background:#ede9fe;color:#5b21b6}
+@media(max-width:900px){.pqc-map,.output-explain{grid-template-columns:1fr}.bridge{grid-template-columns:1fr}.bridge .arrow{transform:rotate(90deg)}}
+</style></head><body>
+<div class="layout">
+<aside>
+<div class="brand">RHEL 10.2 PQC Hands-on</div>
+<div class="subbrand">30분 · Crypto Policy · ML-KEM · ML-DSA</div>
+<div aria-label="화면 테마 선택" class="theme-switch">
+<button id="theme-dark" onclick="setTheme('dark')" type="button">Dark</button>
+<button id="theme-light" onclick="setTheme('light')" type="button">Light</button>
+</div>
+<a href="#overview">전체 흐름</a><a href="#s0">0. 실습 목표와 핵심 개념</a><a href="#s1">1. 초기 환경 확인</a><a href="#s2">2. Apache / 인증서 확인</a><a href="#s3">3. FUTURE 정책 적용</a><a href="#s4">4. Apache 실패 원인 분석</a><a href="#s5">5. RSA 3072 인증서 교체</a><a href="#s6">6. Apache 정상 복구</a><a href="#s7">7. Hybrid ML-KEM 확인</a><a href="#s8">8. 선택: ML-DSA 서명</a><a href="#trouble">문제 해결</a><a href="#check">최종 체크리스트</a><a href="#refs">참고 문서</a></aside>
+<main>
+<div class="eyebrow" id="overview">RED HAT ENTERPRISE LINUX SECURITY</div>
+<h1>RHEL 10.2 PQC 추가 실습</h1>
+<div class="hero-sub">30분 실습 · Crypto Policy 영향 확인에서 Hybrid ML-KEM 검증까지</div>
+<div class="flow"><div class="box"><b>0–3분 · 초기 상태</b><span>DEFAULT / Apache / RSA 2048</span></div><div class="box"><b>3–10분 · FUTURE 적용</b><span>정책 충돌과 Apache 실패</span></div><div class="box"><b>10–20분 · 서비스 복구</b><span>RSA 3072 인증서 교체</span></div><div class="box"><b>20–25분 · PQC 핵심</b><span>X25519MLKEM768 확인</span></div><div class="box"><b>25–30분 · 선택 확장</b><span>ML-DSA 서명·검증</span></div></div>
+<div class="callout ok"><strong>30분 실습의 핵심 목표</strong><p>System-wide Crypto Policy가 실제 Apache와 TLS에 어떻게 적용되는지 확인하고, 마지막에 <code>X25519MLKEM768</code>을 확인하여 <strong>Hybrid PQC Key Exchange</strong>가 사용되는 것을 검증합니다. <strong>ML-KEM 확인까지가 핵심 성공 기준</strong>이며, ML-DSA는 시간이 남을 때 진행합니다.</p></div>
+<div class="callout warn"><strong>실습에서 집중해서 볼 세 가지</strong><p>① FUTURE 적용 후 왜 Apache가 실패하는지, ② RSA 3072 인증서로 어떻게 정상화하는지, ③ TLS 1.3 연결에서 어떤 값이 PQC 적용을 증명하는지에 집중합니다.</p></div>
+<section id="s0"><div class="step-label">PQC ADDITIONAL LAB · 10 MIN</div><h2>추가 실습 목표와 사전 조건</h2><p class="lead">이 추가 실습은 기존 System-wide Cryptographic Policy 본 실습을 완료한 뒤 이어서 진행합니다. 본 실습에서 FUTURE 정책 적용과 RSA 3072 인증서로 Apache 복구까지 완료한 상태에서, 같은 RHEL 10.2 시스템의 TLS 연결에 Hybrid ML-KEM이 실제 사용되는지 확인하고 시간이 남으면 ML-DSA 전자서명까지 체험합니다.</p><div class="callout warn"><strong>시작 전 조건</strong><p>이 HTML에는 기존 Crypto Policy 본 실습 내용이 포함되어 있지 않습니다. 먼저 기존 가이드에서 <strong>FUTURE 정책 적용 → RSA 3072 인증서로 Apache 복구</strong>까지 완료한 상태여야 합니다.</p></div><div class="code-card" data-lang="text"><div class="code-head"><span>추가 실습 흐름</span></div><pre><code>사전 조건 확인
+RHEL 10.2 / FUTURE / Apache active
+        ↓
+TLS 1.3 연결 확인
+        ↓
+X25519MLKEM768
+        ↓
+Hybrid PQC Key Exchange 확인  ← 핵심
+        ↓
+시간이 남으면
+ML-DSA-65 키 생성 → 파일 서명 → Verified OK
+                     → 파일 변경 → Verification failure</code></pre></div><div class="concept-grid"><div class="concept-card"><div class="concept-badge">공유 비밀 설정</div><h3>ML-KEM</h3><p>클라이언트와 서버가 통신에 사용할 공유 비밀을 안전하게 설정하는 PQC 알고리즘입니다. 기억: 둘만 아는 비밀 만들기</p></div><div class="concept-card"><div class="concept-badge">전자서명</div><h3>ML-DSA</h3><p>전자서명을 만들고 공개키로 검증하는 PQC 알고리즘입니다. 기억: 신분증 + 서명</p></div></div></section>
+<section id="s1-pqc"><div class="section-kicker">STEP 7 · 5 MIN</div><h2>Hybrid ML-KEM 확인 — PQC 핵심 실습</h2><p class="lead">기존 실습에서 복구한 동일한 Apache에 TLS 1.3으로 접속해, Key Exchange 단계에서 ML-KEM이 포함된 Hybrid PQC가 실제 협상되는지 확인합니다.</p><h3>1-1. 사전 조건 확인</h3><div class="code-card" data-lang="shell"><div class="code-head"><span>Shell · RHEL / 정책 / Apache 확인</span><div class="code-actions"><button aria-controls="explain-pqc-pre" aria-expanded="false" class="explain-toggle" type="button">명령어 설명</button><button class="copy" type="button">복사</button></div></div><pre><code>printf '=== RHEL 버전 ===\n'
+cat /etc/redhat-release
+
+printf '\n=== 현재 Crypto Policy ===\n'
+update-crypto-policies --show
+
+printf '\n=== Apache 상태 ===\n'
+systemctl is-active httpd</code></pre><div class="command-explain" id="explain-pqc-pre"><div class="explain-title">필요할 때만 펼쳐보는 명령어 설명</div><dl><dt><code>cat /etc/redhat-release</code></dt><dd>RHEL 10.2 환경인지 확인합니다.</dd><dt><code>update-crypto-policies --show</code></dt><dd>현재 정책이 <code>FUTURE</code>인지 확인합니다.</dd><dt><code>systemctl is-active httpd</code></dt><dd>앞 실습에서 복구한 Apache가 <code>active</code>인지 확인합니다.</dd></dl></div></div><div class="table-scroll"><table class="verify"><thead><tr><th>확인 항목</th><th>정상 결과</th><th>다음 단계</th></tr></thead><tbody><tr><td>RHEL 버전</td><td>RHEL 10.2</td><td>RHEL 10.2 PQC 동작 확인 환경</td></tr><tr><td>Crypto Policy</td><td><code>FUTURE</code></td><td>RHEL 10.2 FUTURE 정책 확인</td></tr><tr><td>Apache</td><td><code>active</code></td><td>TLS 1.3 연결 테스트 진행</td></tr></tbody></table></div><h3>1-2. 실제 TLS 1.3 연결에서 Hybrid PQC 확인</h3><div class="code-card" data-lang="shell"><div class="code-head"><span>Shell · Hybrid ML-KEM 확인</span><div class="code-actions"><button aria-controls="explain-pqc-kem" aria-expanded="false" class="explain-toggle" type="button">명령어 설명</button><button class="copy" type="button">복사</button></div></div><pre><code>openssl s_client \
+  -connect localhost:443 \
+  -tls1_3 \
+  &lt;/dev/null 2&gt;&amp;1 \
+  | grep -E 'Negotiated TLS1.3 group|Peer signature type'</code></pre><div class="command-explain" id="explain-pqc-kem"><div class="explain-title">필요할 때만 펼쳐보는 명령어 설명</div><dl><dt><code>-connect localhost:443</code></dt><dd>현재 Apache HTTPS 포트에 접속합니다.</dd><dt><code>-tls1_3</code></dt><dd>TLS 1.3 핸드셰이크로 제한합니다.</dd><dt><code>Peer signature type</code></dt><dd>서버가 자신을 증명할 때 사용한 서명 방식을 보여줍니다.</dd><dt><code>Negotiated TLS1.3 group</code></dt><dd>클라이언트와 서버가 공유 비밀을 설정할 때 협상한 Key Exchange 그룹을 보여줍니다.</dd></dl></div></div><div class="code-card" data-lang="text"><div class="code-head"><span>정상 결과 예시</span></div><pre><code>Peer signature type: rsa_pss_rsae_sha256
+Negotiated TLS1.3 group: X25519MLKEM768</code></pre></div><div class="output-explain"><div><h3>서버 인증</h3><code>rsa_pss_rsae_sha256</code><p>앞에서 만든 RSA 3072 인증서를 사용해 서버가 자신을 증명합니다. 현재 서버 인증은 아직 기존 RSA 방식입니다.</p></div><div><h3>공유 비밀 설정</h3><code>X25519MLKEM768</code><p>기존 X25519와 PQC인 ML-KEM-768을 함께 사용한 Hybrid Key Exchange입니다. 이 줄이 PQC 확인의 핵심입니다.</p></div></div><div class="callout ok"><strong>PQC 핵심 검증 성공</strong><p><code>Negotiated TLS1.3 group: X25519MLKEM768</code>이 보이면, RHEL 10.2의 FUTURE 정책 아래에서 현재 Apache TLS 연결이 <strong>기존 방식 + PQC 방식의 Hybrid Key Exchange</strong>를 사용한다는 것을 확인한 것입니다.</p></div><div class="callout info"><strong>두 기술을 혼동하지 마세요.</strong><p><strong>ML-KEM은 통신 데이터를 직접 암호화하는 알고리즘이 아니라 공유 비밀을 설정하는 기술</strong>입니다. 핸드셰이크가 끝난 뒤 실제 HTTPS 데이터는 AES 같은 효율적인 대칭키 알고리즘으로 암호화됩니다.</p></div><div class="callout ok"><strong>이 실습에서 가장 집중해서 볼 값</strong><p><code>Negotiated TLS1.3 group: X25519MLKEM768</code>이 핵심입니다. <code>Peer signature type: rsa_pss_rsae_sha256</code>은 서버 인증이 RSA라는 뜻이고, <code>X25519MLKEM768</code>은 <strong>기존 X25519 + PQC ML-KEM-768</strong>을 함께 사용하는 Hybrid Key Exchange라는 뜻입니다.</p></div></section><section id="s2-pqc"><div class="section-kicker">STEP 8 · OPTIONAL 5 MIN</div><h2>선택 확장 — ML-DSA 전자서명 체험</h2><p class="lead">Step 1의 Hybrid ML-KEM 확인을 완료한 뒤 시간이 남으면 진행합니다. ML-DSA가 PQC 전자서명 알고리즘이라는 점을 파일 서명과 변조 탐지로 확인합니다.</p><h3>2-1. ML-DSA-65 키 생성 및 정상 서명 검증</h3><div class="callout info"><strong>ML-DSA는 무엇을 확인하나요?</strong><p>ML-DSA는 “누가 서명했고, 서명 이후 데이터가 바뀌지 않았는가?”를 확인합니다. 데이터를 숨기는 암호화가 아니라 <strong>신뢰성과 무결성을 증명하는 전자서명</strong>입니다.</p></div><div class="code-card" data-lang="shell"><div class="code-head"><span>Shell · ML-DSA-65 서명 및 검증</span><div class="code-actions"><button aria-controls="explain-mldsa" aria-expanded="false" class="explain-toggle" type="button">명령어 설명</button><button class="copy" type="button">복사</button></div></div><pre><code>mkdir -p /root/pqc-lab
+cd /root/pqc-lab
+
+printf 'Hello RHEL 10 PQC\n' &gt; message.txt
+
+openssl genpkey \
+  -algorithm mldsa65 \
+  -out mldsa65-private.pem
+
+openssl pkey \
+  -in mldsa65-private.pem \
+  -pubout \
+  -out mldsa65-public.pem
+
+openssl dgst \
+  -sign mldsa65-private.pem \
+  -out message.sig \
+  message.txt
+
+openssl dgst \
+  -verify mldsa65-public.pem \
+  -signature message.sig \
+  message.txt</code></pre><div class="command-explain" id="explain-mldsa"><div class="explain-title">필요할 때만 펼쳐보는 명령어 설명</div><dl><dt><code>openssl genpkey -algorithm mldsa65</code></dt><dd>ML-DSA-65 개인키를 생성합니다.</dd><dt><code>openssl pkey ... -pubout</code></dt><dd>개인키에서 검증용 공개키를 추출합니다.</dd><dt><code>openssl dgst -sign</code></dt><dd>개인키로 <code>message.txt</code>에 전자서명합니다.</dd><dt><code>openssl dgst -verify</code></dt><dd>공개키로 서명이 유효하고 파일이 변경되지 않았는지 검증합니다.</dd></dl></div></div><div class="code-card" data-lang="text"><div class="code-head"><span>정상 결과</span></div><pre><code>Verified OK</code></pre></div><h3>2-2. 파일 변경 후 검증 실패 확인</h3><div class="code-card" data-lang="shell"><div class="code-head"><span>Shell · 변조 탐지 확인</span><div class="code-actions"><button aria-controls="explain-mldsa-tamper" aria-expanded="false" class="explain-toggle" type="button">명령어 설명</button><button class="copy" type="button">복사</button></div></div><pre><code>cp message.txt message-original.txt
+printf 'Modified after signing\n' &gt;&gt; message.txt
+
+openssl dgst \
+  -verify mldsa65-public.pem \
+  -signature message.sig \
+  message.txt
+
+mv -f message-original.txt message.txt</code></pre><div class="command-explain" id="explain-mldsa-tamper"><div class="explain-title">필요할 때만 펼쳐보는 명령어 설명</div><dl><dt><code>printf ... &gt;&gt; message.txt</code></dt><dd>서명된 파일에 내용을 추가하여 서명 이후 변경 상황을 만듭니다.</dd><dt><code>openssl dgst -verify</code></dt><dd>기존 서명과 변경된 파일이 일치하지 않아 검증이 실패하는지 확인합니다.</dd><dt><code>mv -f message-original.txt message.txt</code></dt><dd>테스트 후 원본 파일을 복원합니다.</dd></dl></div></div><div class="callout ok"><strong>ML-DSA에서 집중할 결과</strong><p>원본 파일에서는 <code>Verified OK</code>, 변경된 파일에서는 <code>Verification failure</code>가 나타나면 ML-DSA 전자서명이 서명자 확인과 변조 탐지에 사용된다는 것을 체험한 것입니다.</p></div></section><section id="trouble"><div class="section-kicker">TROUBLESHOOT</div><h2>추가 실습 문제 해결</h2><p class="lead">TLS 결과가 보이지 않으면 “PQC 미지원”이라고 바로 결론내리지 말고, 먼저 Apache와 TLS 핸드셰이크 상태를 확인합니다.</p><h3>출력이 비어 있거나 no peer certificate available이 표시될 때</h3><div class="code-card" data-lang="shell"><div class="code-head"><span>Shell · Apache / 443 / SSL 로그 확인</span><div class="code-actions"><button aria-controls="explain-pqc-trouble" aria-expanded="false" class="explain-toggle" type="button">명령어 설명</button><button class="copy" type="button">복사</button></div></div><pre><code>printf '=== Apache 상태 ===\n'
+systemctl status httpd.service --no-pager
+
+printf '\n=== 443 LISTEN 확인 ===\n'
+ss -ltnp | grep ':443'
+
+printf '\n=== SSL 오류 로그 ===\n'
+tail -20 /var/log/httpd/ssl_error_log
+
+printf '\n=== 전체 TLS 출력 ===\n'
+openssl s_client -connect localhost:443 -tls1_3 &lt;/dev/null</code></pre><div class="command-explain" id="explain-pqc-trouble"><div class="explain-title">필요할 때만 펼쳐보는 명령어 설명</div><dl><dt><code>systemctl status httpd.service</code></dt><dd>Apache가 실제로 실행 중인지 확인합니다.</dd><dt><code>ss -ltnp | grep ':443'</code></dt><dd>HTTPS 포트가 LISTEN 중인지 확인합니다.</dd><dt><code>tail -20 /var/log/httpd/ssl_error_log</code></dt><dd>인증서 또는 Crypto Policy 관련 오류를 확인합니다.</dd><dt><code>openssl s_client ...</code></dt><dd>grep으로 내용을 숨기지 않고 TLS 핸드셰이크 전체 출력을 확인합니다.</dd></dl></div></div><div class="callout warn"><strong>no peer certificate available의 의미</strong><p>클라이언트가 TLS 핸드셰이크 중 서버 인증서를 전달받기 전에 연결이 실패했다는 뜻입니다. PQC 성공 메시지가 아니며, Apache 미기동·443 미LISTEN·인증서 오류·알고리즘 호환성 문제를 먼저 확인해야 합니다.</p></div></section><div class="callout ok"><strong>한 문장으로 정리</strong><p><strong>본 실습은 Crypto Policy가 Apache에 실제로 강제되는 과정을 먼저 경험하고, 같은 TLS 연결에서 ML-KEM 기반 Hybrid PQC Key Exchange를 확인하는 실습입니다.</strong> ML-DSA는 시간이 남을 때 전자서명 역할을 별도로 체험하는 확장 단계입니다.</p></div><section id="check"><div class="callout warn"><strong>추가 실습 완료 기준</strong><br/>필수 성공 기준은 <code>X25519MLKEM768</code> 확인입니다. ML-DSA는 시간이 남을 때 진행하는 선택 확장입니다.</div>
+<div class="section-kicker">CHECK</div>
+<h2>PQC 추가 실습 최종 체크리스트</h2>
+<div class="progress"><span></span></div><div class="progress-text">0 / 9</div>
+<div class="checklist"><label><input type="checkbox"/>RHEL 10.2 환경임을 확인했다.</label><label><input type="checkbox"/>현재 System-wide Cryptographic Policy가 FUTURE임을 확인했다.</label><label><input type="checkbox"/>Apache가 active 상태임을 확인했다.</label><label><input type="checkbox"/>TLS 1.3 연결에서 Peer signature type이 RSA 서명임을 확인했다.</label><label><input type="checkbox"/>TLS 1.3 연결에서 X25519MLKEM768을 확인했다.</label><label><input type="checkbox"/>X25519MLKEM768이 기존 X25519와 PQC ML-KEM-768을 함께 사용하는 Hybrid Key Exchange임을 이해했다.</label><label><input type="checkbox"/>ML-KEM은 실제 HTTPS 데이터를 직접 암호화하는 것이 아니라 공유 비밀 설정에 사용된다는 점을 이해했다.</label><label><input type="checkbox"/>(선택) ML-DSA-65 키를 생성하고 파일 서명 결과 Verified OK를 확인했다.</label><label><input type="checkbox"/>(선택) 파일 변경 후 Verification failure를 확인했다.</label></div>
+<div class="toolbar"><button id="resetChecks" type="button">체크 초기화</button></div>
+</section><section id="refs"><div class="section-kicker">REFERENCES</div><h2>참고 문서</h2><p class="lead">PQC 추가 실습의 명령과 개념 설명은 아래 공식 문서를 기준으로 구성했습니다.</p><ul><li><a href="https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/securing_networks/creating-and-managing-tls-keys-and-certificates" rel="noopener" target="_blank">Red Hat Enterprise Linux 10 — Post-quantum cryptography algorithms in OpenSSL</a></li><li><a href="https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/10.2_release_notes/removed-features" rel="noopener" target="_blank">Red Hat Enterprise Linux 10.2 Release Notes — Non-post-quantum KEX removed from FUTURE</a></li><li><a href="https://csrc.nist.gov/pubs/fips/203/final" rel="noopener" target="_blank">NIST FIPS 203 — ML-KEM</a></li><li><a href="https://csrc.nist.gov/pubs/fips/204/final" rel="noopener" target="_blank">NIST FIPS 204 — ML-DSA</a></li></ul></section>
+</main>
+</div>
+<script>
+function escapeHtml(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+function highlight(code,lang){
+  let lines=code.textContent.split('\n');
+  code.innerHTML=lines.map(line=>{
+    let e=escapeHtml(line);
+    if(/^\s*#/.test(line)) return '<span class="com">'+e+'</span>';
+    if(lang==='containerfile') e=e.replace(/^(FROM|ARG|RUN|COPY|LABEL|CMD|ENV|WORKDIR)\b/,'<span class="kw">$1</span>');
+    else e=e.replace(/^(\s*)(sudo|export|printf|cat|echo|read|unset|rpm|uname|systemctl|sysctl|mkdir|grep)\b/,'$1<span class="cmd">$2</span>');
+    e=e.replace(/(\$\{[^}]+\}|\$[A-Z_][A-Z0-9_]*)/g,'<span class="var">$1</span>');
+    return e;
+  }).join('\n');
+}
+async function copyText(text){
+  // HTTPS/localhost 등 Clipboard API를 사용할 수 있는 환경
+  if (navigator.clipboard && window.isSecureContext) {
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+
+  // file:// 또는 Clipboard API가 제한된 환경용 fallback
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.setAttribute('readonly', '');
+  ta.style.position = 'fixed';
+  ta.style.left = '-9999px';
+  ta.style.top = '0';
+  document.body.appendChild(ta);
+  ta.focus();
+  ta.select();
+
+  const ok = document.execCommand('copy');
+  document.body.removeChild(ta);
+
+  if (!ok) throw new Error('copy command failed');
+}
+
+document.querySelectorAll('.code-card').forEach(card=>{
+  // 툴팁/명령어 설명 안에도 <code>가 있으므로,
+  // 복사·하이라이트 대상은 반드시 실제 명령어 영역(<pre><code>)으로 한정합니다.
+  const code = card.querySelector('pre > code');
+  if (!code) return;
+
+  highlight(code, card.dataset.lang);
+
+  // 화면 예시처럼 복사 버튼이 없는 code-card도 있으므로 안전하게 건너뜁니다.
+  const button = card.querySelector('.copy');
+  if (!button) return;
+
+  button.addEventListener('click', async ()=>{
+    const original = button.textContent;
+    try {
+      await copyText(code.textContent);
+      button.textContent = '복사됨';
+    } catch (e) {
+      button.textContent = '복사 실패';
+      console.error('Clipboard copy failed:', e);
+    }
+    setTimeout(()=>button.textContent = original, 1200);
+  });
+});
+const boxes=[...document.querySelectorAll('.checklist input')];
+function update(){const done=boxes.filter(x=>x.checked).length;document.querySelector('.progress>span').style.width=(done/boxes.length*100)+'%';document.querySelector('.progress-text').textContent=`${done} / ${boxes.length}`;boxes.forEach((b,i)=>localStorage.setItem('rhelLabCheck'+i,b.checked?'1':'0'));}
+boxes.forEach((b,i)=>{b.checked=localStorage.getItem('rhelLabCheck'+i)==='1';b.addEventListener('change',update)});update();
+document.getElementById('resetChecks').onclick=()=>{boxes.forEach(b=>b.checked=false);update();};
+</script><script>
+(function(){
+  const saved = localStorage.getItem('rhel-lab-theme');
+  const preferred = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+  setTheme(preferred);
+})();
+function setTheme(theme){
+  document.documentElement.setAttribute('data-theme', theme);
+  try { localStorage.setItem('rhel-lab-theme', theme); } catch(e) {}
+  const dark = document.getElementById('theme-dark');
+  const light = document.getElementById('theme-light');
+  if (dark && light) {
+    dark.classList.toggle('active', theme === 'dark');
+    light.classList.toggle('active', theme === 'light');
+  }
+}
+</script><script>
+document.querySelectorAll('.explain-toggle').forEach(button=>{
+  button.addEventListener('click', ()=>{
+    const panel = document.getElementById(button.getAttribute('aria-controls'));
+    if (!panel) return;
+    const open = !panel.classList.contains('open');
+    panel.classList.toggle('open', open);
+    button.setAttribute('aria-expanded', open ? 'true' : 'false');
+    button.textContent = open ? '설명 닫기' : '명령어 설명';
+  });
+});
+
+document.querySelectorAll('.quick-tip-wrap').forEach(wrap=>{
+  const button = wrap.querySelector('.quick-tip');
+  if (!button) return;
+  button.addEventListener('click', (e)=>{
+    e.stopPropagation();
+    document.querySelectorAll('.quick-tip-wrap.open').forEach(other=>{
+      if (other !== wrap) other.classList.remove('open');
+    });
+    wrap.classList.toggle('open');
+  });
+});
+document.addEventListener('click', ()=>{
+  document.querySelectorAll('.quick-tip-wrap.open').forEach(x=>x.classList.remove('open'));
+});
+</script></body></html>

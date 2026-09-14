@@ -180,7 +180,7 @@ CY24 RHSC 키노트 세션 데모
 * 이벤트 행사
   + SKT RHEL 핸즈온 워크샵 (이벤트 폴더, 유효기간 2026년 09월 15일까지)
     - 오전 세션 [AI 기반 RHEL 관리](./rhel-lab/SKT--AI_Powered_RHEL_Management_with_MCP_and_Satellite--20260915_v0.1.0.1.pdf)
-    - 오후 세션 [PQC 실습](./rhel-lab/SKT--PQC_실습--20260915_v0.1.0.0.pdf) [추가 실습](./rhel-lab/RHEL10.2_PQC_additional_lab.html)
+    - 오후 세션 [PQC 실습](./rhel-lab/SKT--PQC_lab--20260915_v0.1.0.0.pdf), [추가 실습](./rhel-lab/RHEL10.2_PQC_additional_lab.html)
 <br>
 <br>
 

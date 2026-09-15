@@ -8,9 +8,9 @@
 5. [RHEL AI](README.md#5-rhel-ai)
 6. [레드햇 AI 블로그](README.md#6-레드햇-ai-블로그)
 7. [vllm](README.md#7-vllm)
-88. [외부 사용자를 위한 공유 리포지토리](README.md#88-외부-사용자를-위한-공유-리포지토리)
-    88.1 [일반](README.md#881-일반)
-    88.2 [SKT](README.md#882-이벤트-행사)
+88. [외부 사용자를 위한 공유 리포지토리](README.md#88-외부-사용자를-위한-공유-리포지토리)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;88.1 [일반](README.md#881-일반)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;88.2 [SKT](README.md#882-이벤트-행사)<br>
 99. [참조](README.md#99-참조)
 <br>
 <br>

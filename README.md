@@ -10,7 +10,6 @@
 7. [vllm](README.md#7-vllm)
 88. [외부 사용자를 위한 공유 리포지토리](README.md#88-외부-사용자를-위한-공유-리포지토리)
     + [일반](README.md#881-일반)
-    + [SKT](README.md#882-이벤트-행사)
 99. [참조](README.md#99-참조)
 <br>
 <br>
@@ -181,15 +180,6 @@ CY24 RHSC 키노트 세션 데모
 
 * [퍼블릭](https://github.com/starlab3030/redhat-public) 
   + 앤서블
-<br>
-
-### 88.2 이벤트 행사
-
-* 2026년 09월 15일 - SKT RHEL 핸즈온 워크샵 (유효기간: 2026년 09월 15일 20시까지)
-  + 오전 세션 [AI 기반 RHEL 관리](./rhel-lab/SKT--AI_Powered_RHEL_Management_with_MCP_and_Satellite--20260915_v0.1.0.1.pdf)
-  + 오후 세션
-    - [PQC 실습](./rhel-lab/SKT--PQC_lab--20260915_v0.1.0.0.pdf)
-    - [추가 실습](./rhel-lab/RHEL10.2_PQC_additional_lab.html)
 <br>
 <br>
 

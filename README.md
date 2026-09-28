@@ -133,6 +133,7 @@ CY24 RHSC 키노트 세션 데모
 * [오픈시프트 AI 상에 동적 GPU 슬라이싱](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/gpu-handling/dynamic_gpu_slicing_in_openshift.md)
 * [AI 워크로드를 위한 스마트한 GPU 스케줄링](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/gpu-handling/smarter_gpu_scheduling_for_ai_workload.md)
 * [GPU 리소스 관리에서 MIG, DAS, 그리고 DRA 비교](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/gpu-handling/difference_between_mig_das_and_dra.md)
+* [NVIDIA DGX Spark를 위한 리눅스 커널 구축](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/gpu-handling/build_linux_kernel_for_nvidia_dgx_spark.md)
 <br>
 <br>
 
@@ -143,6 +144,8 @@ CY24 RHSC 키노트 세션 데모
 * [vLLM 성능 문제 해결을 위한 5단계](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/llm-d/five_steps_to_address_vllm_performance.md)
 * [vLLM 기반 추론 서비스 성능 진단 가이드 예제](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/llm-d/guide_to_llm_inference_performance_diagnosis.md)
 * [CPU 기반 AI 추론 벤치마킹](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/vllm/benchmark_ai_inference_on_cpus.md)<br>
+* [분산형 AI 추론 설계: 핵심 개념 및 확장성 고려 사항](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/llm-d/design_distributed_ai_Inference.md)
+* [분산형 AI 추론 최적화: 고급 배포 패턴](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/llm-d/optimize_distributed_ai_inference.md)
 <br>
 <br>
 
@@ -154,6 +157,7 @@ CY24 RHSC 키노트 세션 데모
 * [AAP를 위한 MCP 서버 소개](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/intro_mcp_server_for_aap.md)
 * [AI 에이전트를 위한 메모리 아키텍처 설계](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/architect_memory_for_ai_agents.md)
 * [MCP 서버와 에이전트를 위한 스킬](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/mcp_server_and_agent_skill.md)
+* [AutoRAG를 통해 상담원에게 맞추형 지식을 제공](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/bring_custom_kb_to_agents_with_autorag.md)
 <br>
 <br>
 

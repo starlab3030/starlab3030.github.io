@@ -157,7 +157,7 @@ CY24 RHSC 키노트 세션 데모
 * [AAP를 위한 MCP 서버 소개](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/intro_mcp_server_for_aap.md)
 * [AI 에이전트를 위한 메모리 아키텍처 설계](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/architect_memory_for_ai_agents.md)
 * [MCP 서버와 에이전트를 위한 스킬](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/mcp_server_and_agent_skill.md)
-* [AutoRAG를 통해 상담원에게 맞추형 지식을 제공](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/bring_custom_kb_to_agents_with_autorag.md)
+* [AutoRAG를 통해 에이전트에게 맞추형 지식을 제공](https://github.com/starlab3030/blog--redhat-ai/blob/main/contents/ai-agent/bring_custom_kb_to_agents_with_autorag.md)
 <br>
 <br>
 
